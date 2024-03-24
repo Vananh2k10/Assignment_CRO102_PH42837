@@ -10,6 +10,8 @@ import PlantSceen from '../Layout/PlantSceen';
 import ManageUser from '../Layout/ManageUser';
 import Payment from '../Layout/Payment';
 import DetailProduct from '../Layout/DetailProduct';
+import PlantaSceen from '../Layout/PlantaScreen';
+import CartScreen from '../Layout/CartScreen';
 
 
 
@@ -64,6 +66,8 @@ const MainNavigator = () => {
             <Stack.Screen name='Payment' component={Payment} />
             <Stack.Screen name='DetailProduct' component={DetailProduct} />
             <Stack.Screen name='PlantSceen' component={PlantSceen} />
+            <Stack.Screen name='PlantaSceen' component={PlantaSceen} />
+            <Stack.Screen name='CartScreen' component={CartScreen} />
         </Stack.Navigator>
     )
 }

@@ -149,5 +149,18 @@
       "txt": "Planta Đen"
     }
   ],
-  "notices": []
+  "cart":[
+  ],
+  "notices": [
+
+  ],
+  "newuser": [
+    {
+      "id": " ",
+      "fullname": " ",
+      "email": " ",
+      "phone": " ", 
+      "pass": " "
+    }
+  ]
 }

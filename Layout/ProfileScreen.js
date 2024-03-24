@@ -1,7 +1,7 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const ProfileScreen = ({navigation}) => {
+const ProfileScreen = ({navigation, route}) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -12,14 +12,14 @@ const ProfileScreen = ({navigation}) => {
         <Image source={require('../Image/pesonal.png')} style={{ width: 60, height: 60 }} />
         <Text>
           <Text style={{ fontSize: 17, fontWeight: 'bold' }}>Vũ Thị Vân Anh</Text>
-          {'\n'} anhvtvph42693@gmail.com
+          {'\n'} anhvtvph42837@fpt.edu.vn
         </Text>
       </View>
 
       <View style={styles.option}>
         <Text style={styles.textGray}>Chung 
-        {'\n'}___________________________________________________</Text>
-        <Text>Chỉnh sửa thông tin</Text>
+        {'\n'}_________________________________________________</Text>
+        <Text onPress={() => navigation.navigate('ManageUser')}>Chỉnh sửa thông tin</Text>
         <Text>Cẩm năng trồng cây</Text>
         <Text>Lịch sử giao dịch</Text>
         <Text>Q & A</Text>
@@ -27,7 +27,7 @@ const ProfileScreen = ({navigation}) => {
 
       <View style={styles.option}>
         <Text style={styles.textGray}>Bảo mật và điều khoản 
-        {'\n'}___________________________________________________</Text>
+        {'\n'}_________________________________________________</Text>
         <Text>Điền khoản và điều kiện</Text>
         <Text>Chính sách quyền riêng tư</Text>
         <Text style={{color: 'red'}} onPress={()=> navigation.navigate('LoginScreen')}>Đăng xuất</Text>

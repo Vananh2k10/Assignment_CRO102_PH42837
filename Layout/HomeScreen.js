@@ -6,18 +6,13 @@ export const URL = 'http://192.168.0.125:3000'
 const HomeScreen = ({ navigation }) => {
 
     const [ListPlant, setListPlant] = useState([]);
-    const [ListPlantFull, setListPlantFull] = useState([]);
     const [ListPlanta, setListPlanta] = useState([]);
-    const [ListPlantaFull, setListPlantaFull] = useState([]);
 
     const getListPlant = async () => {
         await fetch(`${URL}/plants`)
             .then(res => res.json())
             .then(data => {
-                setListPlantFull(data);
-                const list = data;
-                const list4 = list.filter((item, index) => index < 4);
-                setListPlant(list4)
+                setListPlant(data)
             })
             .catch(err => console.log(err))
     }
@@ -26,10 +21,7 @@ const HomeScreen = ({ navigation }) => {
         await fetch(`${URL}/plantas`)
             .then(res => res.json())
             .then(data => {
-                setListPlantaFull(data);
-                const list = data;
-                const list4 = list.filter((item, index) => index < 4);
-                setListPlanta(list4);
+                setListPlanta(data);
             })
             .catch(err => console.log(err))
     }
@@ -42,17 +34,16 @@ const HomeScreen = ({ navigation }) => {
 
     return (
         <SafeAreaView style={styles.container}>
-            
+
             <ScrollView>
                 <View style={{ width: '100%', height: 320 }}>
                     <Image
                         style={{ width: '100%', height: '100%', justifyContent: 'center' }}
                         source={require('../Image/logo.png')}
                     />
-                    <TouchableOpacity onPress={() => navigation.navigate("PlantSceen", { data: ListPlantFull })}
+                    <TouchableOpacity onPress={() => navigation.navigate("PlantSceen", { data: ListPlant })}
                         style={styles.newSP}>
                         <Text style={{ fontSize: 14, color: 'green', fontWeight: 'bold', textDecorationLine: 'underline' }}>Xem hàng mới về </Text>
-                        <Image source={require('../Image/next.png')} style={{ height: 30, width: 30 }} tintColor={"green"} />
                     </TouchableOpacity>
 
                 </View>
@@ -62,7 +53,7 @@ const HomeScreen = ({ navigation }) => {
                 <FlatList
                     numColumns={2}
                     scrollEnabled={false}
-                    data={ListPlant}
+                    data={ListPlant.filter((item, index) => index < 4)}
                     keyExtractor={item => item.id}
                     renderItem={({ item }) =>
                         <TouchableOpacity onPress={() => navigation.navigate("DetailProduct", { item: item })}
@@ -74,8 +65,9 @@ const HomeScreen = ({ navigation }) => {
                             <Text style={styles.price}>{item.price} đ</Text>
                         </TouchableOpacity >} >
                 </FlatList>
-                <TouchableOpacity onPress={() => navigation.navigate("PlantSceen", { data: ListPlantFull })}
+                <TouchableOpacity onPress={() => navigation.navigate("PlantSceen", { data: ListPlant })}
                     style={styles.Xemthem}>
+                    <View />
                     <Text style={{ fontSize: 14, color: 'green', fontWeight: 'bold', textDecorationLine: 'underline' }}>Xem thêm bánh khác </Text>
                 </TouchableOpacity>
 
@@ -85,7 +77,7 @@ const HomeScreen = ({ navigation }) => {
                     numColumns={2}
                     extraData={4}
                     scrollEnabled={false}
-                    data={ListPlanta}
+                    data={ListPlanta.filter((item, index) => index < 4)}
                     keyExtractor={item => item.id}
                     renderItem={({ item }) =>
                         <TouchableOpacity onPress={() => navigation.navigate("DetailProduct", { item: item })}
@@ -97,12 +89,13 @@ const HomeScreen = ({ navigation }) => {
                         </TouchableOpacity>} >
                 </FlatList>
 
-                <TouchableOpacity style={styles.Xemthem}>
+                <TouchableOpacity onPress={()=> navigation.navigate('PlantaSceen', {data : ListPlanta})}
+                 style={styles.Xemthem}>
                     <View />
                     <Text style={{ fontSize: 14, color: 'green', fontWeight: 'bold', textDecorationLine: 'underline' }}>Xem thêm nước khác </Text>
                 </TouchableOpacity>
             </ScrollView>
-            <TouchableOpacity style={styles.cart}>
+            <TouchableOpacity style={styles.cart} onPress={()=> navigation.navigate('CartScreen')}>
                 <Image source={require('../Image/cart.png')} style={{ height: 30, width: 30 }} />
             </TouchableOpacity>
         </SafeAreaView>
@@ -175,8 +168,8 @@ const styles = StyleSheet.create({
         elevation: 10
     },
     newSP: {
-        padding: 20, gap: 20, flexDirection: 'row',
-        position: 'absolute', bottom: 0, alignItems: 'center'
+        bottom: 0,
+        marginLeft: 10
     }
 
 })

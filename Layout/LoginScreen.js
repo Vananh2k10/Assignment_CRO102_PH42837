@@ -26,7 +26,6 @@ const LoginScreen = (props) => {
                 console.log(data);
                 if (data.length != 1) {
                     Alert.alert('Email không chính xác');
-                    props.navigation.navigate('MainNavigator');
                     return false;
                 }
                 const user = data[0];
@@ -61,7 +60,7 @@ const LoginScreen = (props) => {
                                 setpass(txt)
                             }} />
                         <TouchableOpacity onPress={()=>setshowPass(!showPass)}>
-                            <Image style={{ width: 30, height: 30 }}
+                            <Image style={{ width: 20, height: 20 }}
                                 source={ showPass ? require('../Image/visible.png') : require('../Image/invisible.png')} />
                         </TouchableOpacity>
                     </View>

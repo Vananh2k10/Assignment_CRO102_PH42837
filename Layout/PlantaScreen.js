@@ -1,7 +1,7 @@
 import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 
-const PlantSceen = ({ navigation, route }) => {
+const PlantaSceen = ({ navigation, route }) => {
     const { data } = route.params;
 
     return (
@@ -11,7 +11,7 @@ const PlantSceen = ({ navigation, route }) => {
                 <Image style={{ width: 20, height: 20 }}
                     source={require('../Image/back.png')}/>
                 </TouchableOpacity>
-                <Text style={{ textAlign: 'center', fontSize: 18, fontWeight: 'bold' }}>Cây trồng</Text>
+                <Text style={{ textAlign: 'center', fontSize: 18, fontWeight: 'bold' }}>Chậu cây và vật dụng</Text>
                 <TouchableOpacity style={{ width: 50 }} onPress={()=>navigation.navigate('CartScreen')}>
                 <Image style={{ width: 26, height: 26 }}
                     source={require('../Image/cart.png')}/>
@@ -20,9 +20,8 @@ const PlantSceen = ({ navigation, route }) => {
 
             <View style={{flexDirection: 'row', gap :30, marginHorizontal: 20}}>
                 <Text style={{color: 'red'}}>Tất cả</Text>
-                <Text>Hàng mới về</Text>
-                <Text>Ưa bóng</Text>
-                <Text>Ửa râm</Text>
+                <Text>Chậu cây</Text>
+                <Text>Vật dụng</Text>
             </View>
             <FlatList
                 numColumns={2}
@@ -43,7 +42,7 @@ const PlantSceen = ({ navigation, route }) => {
     )
 }
 
-export default PlantSceen
+export default PlantaSceen
 
 const styles = StyleSheet.create({
     container: {

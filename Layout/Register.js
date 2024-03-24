@@ -1,7 +1,7 @@
 import { Image, StyleSheet, Text, TextInput, View, CheckBox, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 
-const Register = (props) => {
+const Register = (props, ) => {
     const [name, setname] = useState('')
     const [email, setemail] = useState('')
     const [sdt, setsdt] = useState('')
