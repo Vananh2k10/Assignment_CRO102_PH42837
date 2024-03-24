@@ -1,20 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useEffect, useState } from 'react';
+import AuthNavigator from './navigator/AuthNavigator';
+import { NavigationContainer } from '@react-navigation/native';
+import WelcomeScreen from './Layout/WelcomeScreen';
+import MainNavigator from './navigator/MainNavigator';
+
 
 export default function App() {
+
+  const [checkWelcome, setcheckWelcome] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setcheckWelcome(false);
+    }, 2000);
+    return () => clearTimeout(timeout)
+  }, [])
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    checkWelcome
+      ? <WelcomeScreen />
+      : <NavigationContainer>
+        <AuthNavigator />
+      </NavigationContainer>
+    // <NavigationContainer>
+    //   <MainNavigator/>
+    // </NavigationContainer>
   );
+
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

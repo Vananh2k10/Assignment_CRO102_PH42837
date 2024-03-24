@@ -1,0 +1,153 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "admin@gmail.com",
+      "pass": "adim123",
+      "fullname": "Vũ Thị Vân Anh"
+    },
+    {
+      "id": "2",
+      "email": "sang@gmail.com",
+      "pass": "sang123",
+      "fullname": "Lê Đăng Sang"
+    },
+    {
+      "id": "3",
+      "email": "a",
+      "pass": "a",
+      "fullname": "Lê Đăng Sang"
+    }
+  ],
+  "plants": [
+    {
+      "id": "1",
+      "name": "Spider plant",
+      "price": "250.000",
+      "img": "https://i.pinimg.com/564x/e9/13/b9/e913b9d4a6ed69d511a72cf91f030f4c.jpg",
+      "type": true,
+      "origin": "Châu phi",
+      "quantity": "156",
+      "status": "1",
+      "size": "Small",
+      "description": "Cây cảnh siêu đẹp, dùng để trang trí cho ngôi nhà"
+    },
+    {
+      "id": "2",
+      "name": "Spider plant",
+      "price": "350.000",
+      "img": "https://i.pinimg.com/564x/c0/95/e2/c095e277e7bce07d13babd483c7286d0.jpg",
+      "type": true,
+      "origin": "Châu phi",
+      "quantity": "156",
+      "status": "1",
+      "size": "Big",
+      "description": "Cây cảnh siêu đẹp, dùng để trang trí cho ngôi nhà"
+    },
+    {
+      "id": "3",
+      "name": "Spider plant",
+      "price": "250.000",
+      "img": "https://i.pinimg.com/564x/f6/ae/0a/f6ae0a51d5fec778d473861a85072878.jpg",
+      "type": true,
+      "origin": "Châu phi",
+      "quantity": "156",
+      "status": "1",
+      "size": "Small",
+      "description": "Cây cảnh siêu đẹp, dùng để trang trí cho ngôi nhà"
+    },
+    {
+      "id": "4",
+      "name": "Spider plant",
+      "price": "350.000",
+      "img": "https://i.pinimg.com/564x/d9/77/49/d977492ff09f8eb2caf458c7c88c0f45.jpg",
+      "type": true,
+      "origin": "Châu phi",
+      "quantity": "156",
+      "status": "1",
+      "size": "Big",
+      "description": "Cây cảnh siêu đẹp, dùng để trang trí cho ngôi nhà"
+    },
+    {
+      "id": "5",
+      "name": "Tree plant",
+      "price": "350.000",
+      "img": "https://i.pinimg.com/564x/07/f6/44/07f6445cdd51c6544ca27270f6e856e4.jpg",
+      "type": true,
+      "origin": "Châu phi",
+      "quantity": "156",
+      "status": "1",
+      "size": "Big",
+      "description": "Cây cảnh siêu đẹp, dùng để trang trí cho ngôi nhà"
+    },
+    {
+      "id": "6",
+      "name": "Bonsai",
+      "price": "350.000",
+      "img": "https://i.pinimg.com/564x/bf/cf/cf/bfcfcfa087c64cfa68207d6496ed3e61.jpg",
+      "type": true,
+      "origin": "Châu phi",
+      "quantity": "156",
+      "status": "1",
+      "size": "Big",
+      "description": "Cây cảnh siêu đẹp, dùng để trang trí cho ngôi nhà"
+    }
+  ],
+  "plantas": [
+    {
+      "id": "1",
+      "name": "Planta Trắng",
+      "price": "250.000",
+      "img": "https://i.pinimg.com/564x/35/de/84/35de84825cbdd4b48f7df804016666c4.jpg",
+      "quantity": "156",
+      "status": "1",
+      "description": "Chậu câu màu trắng, dùng để trồng cây"
+    },
+    {
+      "id": "2",
+      "name": "Planta Đen",
+      "price": "250.000",
+      "img": "https://i.pinimg.com/736x/92/b6/88/92b6881595d642bac211d9c4b0f4bb5b.jpg",
+      "quantity": "156",
+      "status": "1",
+      "description": "Chậu câu màu đen, dùng để trồng cây"
+    },
+    {
+      "id": "3",
+      "name": "Planta Đen",
+      "price": "250.000",
+      "img": "https://i.pinimg.com/564x/f1/aa/8a/f1aa8a1d0531a447164af9d4e7c406c6.jpg",
+      "quantity": "156",
+      "status": "1",
+      "description": "Chậu câu màu đen, dùng để trồng cây"
+    },
+    {
+      "id": "4",
+      "name": "Planta Đen",
+      "price": "250.000",
+      "img": "https://i.pinimg.com/564x/d2/51/b7/d251b791749e78a2d19f4b8907499d13.jpg",
+      "quantity": "156",
+      "status": "1",
+      "description": "Chậu câu màu đen, dùng để trồng cây"
+    }
+  ],
+  "search": [
+    {
+      "id": "d3ed",
+      "txt": "Spider plant"
+    },
+    {
+      "id": "8187",
+      "txt": "Vân anh"
+    },
+    {
+      "id": "58ca",
+      "txt": "Bonsai"
+    },
+    {
+      "id": "d5d2",
+      "txt": "Planta Đen"
+    }
+  ],
+  "notices": []
+}
